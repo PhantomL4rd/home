@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pl4rd.com</title>
+  <meta name="description" content="pl4rd.com - ツールポータル">
+  <meta property="og:title" content="pl4rd.com">
+  <meta property="og:description" content="pl4rd.com - ツールポータル">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pl4rd.com">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --surface: #f6f6f7;
+      --text: #111111;
+      --muted: #666666;
+      --border: #e5e5e7;
+      --hover: #efeff1;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1012;
+        --surface: #17181b;
+        --text: #f3f4f6;
+        --muted: #a1a1aa;
+        --border: #2a2c31;
+        --hover: #202228;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      line-height: 1.6;
+    }
+
+    .wrap {
+      width: min(720px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 72px 0 56px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .lead {
+      margin: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .list { display: grid; gap: 12px; }
+
+    a.card {
+      display: block;
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
+    }
+
+    a.card:hover,
+    a.card:focus-visible {
+      background: var(--hover);
+      border-color: var(--muted);
+      outline: none;
+    }
+
+    .title { margin: 0 0 4px; font-size: 1rem; font-weight: 600; }
+    .desc { margin: 0; font-size: 0.92rem; color: var(--muted); }
+    .url { margin: 8px 0 0; font-size: 0.84rem; color: var(--muted); }
+
+    .x-tag {
+      position: absolute;
+      bottom: 18px;
+      right: 20px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .x-tag:hover { color: var(--text); }
+
+    footer {
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>pl4rd.com</h1>
+    <p class="lead">ヒカセン向けにツールを公開中</p>
+
+    <section class="list" aria-label="ツール一覧">
+      <a class="card" href="https://colorant-picker.pl4rd.com/">
+        <p class="title">カララントピッカー</p>
+        <p class="desc">カララント配色パターン提案ツール</p>
+        <p class="url">colorant-picker.pl4rd.com</p>
+        <span class="x-tag" onclick="event.preventDefault();event.stopPropagation();window.open('https://x.com/hashtag/カララントピッカー','_blank')">#カララントピッカー</span>
+      </a>
+      <a class="card" href="https://mirapri-insight.pl4rd.com/">
+        <p class="title">ミラプリインサイト</p>
+        <p class="desc">ミラプリトレンド分析ツール</p>
+        <p class="url">mirapri-insight.pl4rd.com</p>
+        <span class="x-tag" onclick="event.preventDefault();event.stopPropagation();window.open('https://x.com/hashtag/ミラプリインサイト','_blank')">#ミラプリインサイト</span>
+      </a>
+      <a class="card" href="https://4seasons.pl4rd.com/">
+        <p class="title">4seasons</p>
+        <p class="desc">キャラクターのパーソナルカラー診断</p>
+        <p class="url">4seasons.pl4rd.com</p>
+        <span class="x-tag" onclick="event.preventDefault();event.stopPropagation();window.open('https://x.com/hashtag/WoL_4seasons','_blank')">#WoL_4seasons</span>
+      </a>
+      <a class="card" href="https://chara-ca.pl4rd.com/">
+        <p class="title">キャラカウィザード</p>
+        <p class="desc">キャラクターカード作成ツール</p>
+        <p class="url">chara-ca.pl4rd.com</p>
+      </a>
+    </section>
+
+    <footer>&copy; 2025 pl4rd.com</footer>
+  </main>
+</body>
+</html>
